@@ -2,32 +2,6 @@
 
 exports[`App maches snapshot 1`] = `
 <div
-  className="App"
->
-  <header
-    className="App-header"
-  >
-    <p>
-      Edit 
-      <code>
-        src/App.tsx
-      </code>
-       and save to reload.
-    </p>
-    <a
-      className="App-link"
-      href="https://reactjs.org"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Learn React
-    </a>
-    <button
-      aria-label={null}
-      className="btn btn-secondary"
-      label="Hello"
-      onClick={[Function]}
-    />
-  </header>
-</div>
+  className="loader"
+/>
 `;

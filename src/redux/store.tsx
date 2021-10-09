@@ -1,6 +1,9 @@
 import thunk from 'redux-thunk';
 import {combineReducers,createStore,applyMiddleware} from 'redux';
 
+//My own imports
+import userReducer from './user/userReducer';
+
 export const middlewares = [thunk];
 
 if(process.env.MODE_ENV === 'development'){
@@ -8,7 +11,7 @@ if(process.env.MODE_ENV === 'development'){
 }
 
 const rootReducer = combineReducers({
-    
+    userReducer
 });
 
 const store = createStore(rootReducer, applyMiddleware(...middlewares));

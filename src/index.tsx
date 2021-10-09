@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { CookiesProvider } from "react-cookie";
 import { Provider } from 'react-redux';
+import reportWebVitals from './reportWebVitals';
 
+//My onw import
+import './sass/main.scss';
 import store from './redux/store';
 import App from './App'
-import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <CookiesProvider>

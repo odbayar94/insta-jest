@@ -3,9 +3,11 @@ import { Switch, Route, BrowserRouter} from 'react-router-dom';
 import PrivateRoute from "./routes/PrivateRoute";
 
 import LoadingPage from './pages/LoadingPage';
-import LoginPage from './pages/LoginPage';
+
 import Button from './component/button/button'
-import './App.css';
+
+// import LoginPage from './pages/LoginPage';
+const LoginPage = lazy(()=> import('./pages/LoginPage'));
 
 function App() {
   return (
