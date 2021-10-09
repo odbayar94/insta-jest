@@ -6,8 +6,9 @@
  import { render, unmountComponentAtNode } from "react-dom";
  import { act } from "react-dom/test-utils";
  import renderer from "react-test-renderer";
+ import '@testing-library/jest-dom'
  
- import App from "./src/App";
+ import App from "../src/App";
  
  let container: any = null;
  beforeEach(() => {
@@ -27,7 +28,12 @@
    act(() => {
      render(<App />, container);
    });
-   expect(container.textContent).toBe("Edit src/App.tsx and save to reload.Learn React");
+   expect(container.textContent).toBe("Edit src/App.tsx and save to reload.Learn ReactHello");
+  // expect(getByTestId('greeting-text').textContent).toBe('hello there')
    
  });
+
+function getByTestId(arg0: string) {
+  throw new Error("Function not implemented.");
+}
  

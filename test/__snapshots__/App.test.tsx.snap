@@ -22,6 +22,12 @@ exports[`App maches snapshot 1`] = `
     >
       Learn React
     </a>
+    <div
+      className="button-style"
+      data-testid="button"
+    >
+      Hello
+    </div>
   </header>
 </div>
 `;

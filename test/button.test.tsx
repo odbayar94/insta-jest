@@ -7,7 +7,7 @@ import {render, cleanup} from '@testing-library/react'
 import renderer from 'react-test-renderer'
 // import "testing-library__jest-dom/extend-expect"
 
-import Button from "../button"
+import Button from "../src/component/button/button"
 
 afterEach(cleanup);
 
