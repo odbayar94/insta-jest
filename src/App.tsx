@@ -19,7 +19,6 @@ function App() {
         >
           Learn React
         </a>
-        <Button label="click me please"></Button>
       </header>
     </div>
   );

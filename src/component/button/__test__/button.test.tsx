@@ -11,11 +11,11 @@ import Button from "../button"
 
 afterEach(cleanup);
 
-it("render without crashing", ()=>{
-    const div = document.createElement("div")
-    ReactDOM.render(<Button label="click me please"></Button>,div)
-    ReactDOM.unmountComponentAtNode(div)
-})
+// it("render without crashing", ()=>{
+//     const div = document.createElement("div")
+//     ReactDOM.render(<Button label="click me please"></Button>,div)
+//     ReactDOM.unmountComponentAtNode(div)
+// })
 // it("render button", ()=>{
 //     const {getByTestId} = render(<Button label="click me please"></Button>)
 //     expect(getByTestId('button')).toHaveTextContent("click me please")
@@ -24,5 +24,4 @@ it("render without crashing", ()=>{
 it("matches snapshot",()=>{
     const tree = renderer.create(<Button label="save"></Button>).toJSON()
     expect(tree).toMatchSnapshot()
-
 })

@@ -7,6 +7,9 @@ const config: Config.InitialOptions = {
   //   "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "./__mocks__/fileMock.ts",
   //   "\\.(css|less|scss|sass)$": "identity-obj-proxy"
   // },
+  "moduleNameMapper": {
+    "\\.(css|less|scss)$": "identity-obj-proxy"
+  },
   
   "transformIgnorePatterns": [
     "node_modules/(?!node-sass)/"
@@ -21,9 +24,9 @@ const config: Config.InitialOptions = {
     ]
   ],
   "transform": {
-    "^.+\\.(ts|tsx|js|jsx)$": "ts-jest",
-    ".(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "./jest-config/file-mock.ts",
-    '.(css|less)$': './jest-config/style-mock.ts'
+    // ".(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "./jest-config/file-mock.ts",
+    // '.(css|less)$': './jest-config/style-mock.ts',
+    "^.+\\.(ts|tsx|js|jsx)$": "ts-jest"
   }
    
 };
