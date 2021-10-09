@@ -28,7 +28,7 @@
    act(() => {
      render(<App />, container);
    });
-   expect(container.textContent).toBe("Edit src/App.tsx and save to reload.Learn ReactHello");
+   expect(container.textContent).toBe("Edit src/App.tsx and save to reload.Learn React");
   // expect(getByTestId('greeting-text').textContent).toBe('hello there')
    
  });

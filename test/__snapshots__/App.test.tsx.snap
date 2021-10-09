@@ -22,12 +22,12 @@ exports[`App maches snapshot 1`] = `
     >
       Learn React
     </a>
-    <div
-      className="button-style"
-      data-testid="button"
-    >
-      Hello
-    </div>
+    <button
+      aria-label={null}
+      className="btn btn-secondary"
+      label="Hello"
+      onClick={[Function]}
+    />
   </header>
 </div>
 `;

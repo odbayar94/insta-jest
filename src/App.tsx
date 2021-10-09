@@ -1,27 +1,22 @@
-import React from 'react';
+import React, {Suspense, lazy, useState} from 'react';
+import { Switch, Route, BrowserRouter} from 'react-router-dom';
+import PrivateRoute from "./routes/PrivateRoute";
+
+import LoadingPage from './pages/LoadingPage';
+import LoginPage from './pages/LoginPage';
 import Button from './component/button/button'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button label="Hello"></Button>
-      </header>
-   
-    </div>
+    <Suspense fallback={<LoadingPage/>}>
+      <BrowserRouter>
+      <Switch>
+        <Route path="/" exact={false} component={LoginPage}/>
+      </Switch>
+      </BrowserRouter>
+      
+    </Suspense>
   );
 }
 
