@@ -4,11 +4,17 @@ import { Button } from 'reactstrap';
 import Cookies from "js-cookie";
 import classNames from "classnames";
 
+
+//My own import
 import { loginUser } from "../redux/user/userActions"
 import { useAppSelector, useAppDispatch } from '../redux/hook'
 
+//Components
+// import ErrorMessage from '../component/ErrorMessage'
+
 
 function LoginPage(){
+
   const token = Cookies.get("token");
   const user = useAppSelector(state => state.userReducer); 
   const dispatch = useAppDispatch();
@@ -63,7 +69,8 @@ const changePassword = (e: any) => {
           Instagram
         </h1>
       </div>
-      {user.error ? (<div className="login__errorMessage">{user.errorMessage}</div>) : null}
+       {user.error ? (<div className="login__errorMessage">{user.errorMessage}</div>) : (<div></div>)}
+    
     <form>
       <div className="login__username">
         <label>
